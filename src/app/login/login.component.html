@@ -1,0 +1,56 @@
+<div style="display: flex; align-items: center; height: 100vh; justify-content: center; margin-top:-49px">
+   
+    <div  fxFlex="80%" fxLayout="column" fxLayoutAlign="start start" class="mat-elevation-z3" fxLayoutGap="20px" [style.height.vh]="isDesktopScreen? 80: 60" style="margin: 0 auto;  align-items: center; background: url(../../assets/photos/pexels-steve-johnson-1044989.jpg) center center fixed no-repeat;" >
+      
+      <div fxFlex="100%" [style.width.%]="isDesktopScreen? 50 : 100" style="text-align: center;" >
+        
+            <div fxFlex="100%" fxLayout="column" style="background-color: white; padding: 10px;">
+              
+              <h1 style=" margin-top: 25px;" class="mat-headline">Login</h1>
+              
+              <form [formGroup]="formGroup" fxFlex="100%" fxLayout="column" fxLayoutGap="25px" style=" padding: 10px; width: 75%; margin: auto; justify-content: center;">
+            
+                <mat-form-field appearance="outline" >
+            
+                  <mat-label>Username</mat-label>
+            
+                  <input matInput placeholder="Enter username" formControlName="username">
+            
+                  <mat-icon matSuffix>person</mat-icon>
+            
+                  <mat-hint>Please enter 'admin' as username</mat-hint>
+
+                  <mat-error>{{formService.getUsernameErrorMessage()}}</mat-error>
+            
+                </mat-form-field>
+            
+                <mat-form-field appearance="outline" >
+            
+                  <mat-label>Enter your password</mat-label>
+            
+                  <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+            
+                  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+  
+                  </button>
+  
+                  <mat-hint>Please enter 'admin' as password</mat-hint>
+
+                  <mat-error>{{formService.getPasswordErrorMessage()}}</mat-error>
+            
+                </mat-form-field>
+      
+                <button mat-raised-button style="background-color: #70078b; color: white;" (click)="formService.loginFunction()">Submit</button>
+          
+              </form>
+  
+              <p class="mat-caption" style="text-align: center;" > Go to Employees list. <a mat-link routerLink="../register">Click here.</a></p>
+          
+            </div>
+        
+        </div>
+        
+    </div>
+  </div>

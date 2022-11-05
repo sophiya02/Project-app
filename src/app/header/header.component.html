@@ -1,0 +1,61 @@
+<mat-toolbar style="font-family: 'Texturina', serif" fxFlex="100%" fxLayout="row" fxLayoutAlign="space-between" style="height:50px;">
+    <!-- <img src="../../assets/photos/Uniex.png" style="width:80px" alt="uniex logo"> -->
+    <span style="margin-top:9px"> App </span> 
+
+    <div  fxFlex="100%" fxLayout="row" fxLayoutAlign="end center">
+
+          <mat-form-field class="search_input" appearance="outline" style=" margin-top:25px !important">
+            
+            <input matInput placeholder="Search" type="text" (keyup)="formService.applyFilter($event)" >
+      
+            <mat-icon (click)="formService.applyFilter($event)" matSuffix>search</mat-icon>
+      
+          </mat-form-field>
+
+            <div *ngIf="isDesktopScreen">
+        
+                <button mat-icon-button matTooltip="Emplyee List" routerLink="/employees">
+                    
+                    <mat-icon><span class="material-icons-outlined"> person add</span></mat-icon>
+                
+                </button>/
+                
+                <button mat-icon-button [matTooltip]="formService.loggedIn ? 'Logout' : 'Login'" (click)="formService.loginLogoutFunction()" >
+                
+                    <mat-icon><span class="material-icons-outlined">{{formService.loggedIn ? 'logout' : 'login'}}</span></mat-icon>
+                
+                </button>
+
+            </div>
+
+            <div *ngIf="isTabScreen || isSmallScreen">
+
+                <button mat-icon-button matTooltip="Menu" [matMenuTriggerFor]="menu">
+                
+                <mat-icon><span class="material-icons-outlined"> menu </span></mat-icon>
+        
+                </button>
+        
+                <mat-menu #menu="matMenu" class="menu-class">
+                    
+                    <button mat-menu-item routerLink="/employees" >
+                        
+                        <mat-icon>  <span class="material-icons-outlined"> person add </span></mat-icon> <span>Employee List </span>
+                    
+                    </button>
+
+                    <button mat-menu-item (click)="formService.loginLogoutFunction()"> 
+                    
+                        <mat-icon><span class="material-icons-outlined">{{formService.loggedIn ? 'logout' : 'login'}}</span></mat-icon><span>{{formService.loggedIn ? 'Logout' : 'Login'}}</span>
+                                    
+                    </button>
+            
+                </mat-menu>
+
+            </div> 
+    
+    </div>    
+
+    <!-- <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel> -->
+
+  </mat-toolbar>

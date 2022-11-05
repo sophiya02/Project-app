@@ -1,0 +1,72 @@
+<div style="display: flex; align-items: center; height: 100vh; justify-content: center; background-color: #e9e1e1; margin-top:-49px">
+   
+    <div [fxFlex]="isSmallScreen ? '100%' : '80%'" fxLayout="column" [fxLayoutAlign]="isSmallScreen ? 'start center' : 'end end'" fxLayoutGap="20px" style="margin: 0 auto; height: 80vh; align-items: center; background: url(../../assets/photos/pexels-steve-johnson-1044989.jpg) center center fixed no-repeat;" >
+      
+      <div fxFlex="100%" [style.width.%]="isSmallScreen ? '100' : '50'" [style.padding.px]="isSmallScreen ? '10' : '0'" style="text-align: center;" >
+        
+            <div fxFlex="100%" fxLayout="column" style="background-color: white; padding: 10px">
+              
+              <h1 style="font-family: 'Texturina', serif; margin-top: 12px;">Register</h1>
+              
+              <form [formGroup]="empFormGroup" fxFlex="100%" fxLayout="column" fxLayoutGap="25px" style=" padding: 10px; width: 75%; margin: auto; justify-content: center;">
+                
+                <mat-form-field appearance="outline">
+                 
+                  <mat-label>Name</mat-label>
+                 
+                  <input formControlName="name" matInput placeholder="Enter your Name" #name>
+                  
+                  <mat-icon matSuffix>person</mat-icon>
+  
+                  <mat-error *ngIf="formService.employeeFormGroup.get('name')?.invalid">{{formService.getNameError()}}</mat-error>
+                
+                </mat-form-field>
+                
+                <mat-form-field appearance="outline">
+                
+                  <mat-label>Enter your Position</mat-label>
+                
+                  <input formControlName="position" matInput placeholder="Enter your position"  required>
+                   
+                  <mat-error *ngIf="formService.employeeFormGroup.get('position')?.invalid">{{formService.getPositionError()}}</mat-error>
+               
+                </mat-form-field>
+               
+                <mat-form-field appearance="outline">
+               
+                  <mat-label>Enter about yourself</mat-label>
+               
+                  <input formControlName="about" matInput type="text">
+  
+                  <mat-error *ngIf="formService.employeeFormGroup.get('about')?.invalid">{{formService.getAboutError()}}</mat-error>
+               
+                </mat-form-field>
+               
+                <mat-form-field appearance="outline">
+               
+                  <mat-label>Joining Date</mat-label>
+
+                  <input type="text" formControlName="joining_date" matInput [matDatepicker]="picker">
+                  
+                  <mat-hint>MM/DD/YYYY</mat-hint>
+                  
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  
+                  <mat-datepicker #picker></mat-datepicker>
+                  
+                  <mat-error *ngIf="formService.employeeFormGroup.get('joining_date')?.invalid">{{formService.getJoiningDateError()}}</mat-error>
+                
+                </mat-form-field>
+                  
+                <button mat-raised-button style="background-color: #70078b; color: white;" (click)="formService.onSave()">Submit</button>
+          
+              </form>
+  
+              <p class="mat-caption" style="text-align: center;"> Already registered? <a mat-link routerLink="../login">Login here.</a></p>
+  
+            </div>
+        
+        </div>
+        
+    </div>
+  </div>

@@ -1,0 +1,18 @@
+<div style="margin: 25px"> 
+    
+    <span class="mat-headline">Employee's {{formService.view==='view_list' ? 'Card' : 'List' }} View</span>
+
+    <div fxLayoutAlign="end end">
+
+        <button mat-icon-button style="border-radius: 50%" matTooltip="Add an Employee" routerLink="/register"> <mat-icon> add</mat-icon></button>
+        
+        <button mat-icon-button style="border-radius: 50%" (click)="toggleView()" [matTooltip]="formService.view==='view_list' ? 'List View' : 'card View'" > <mat-icon> {{formService.view}}</mat-icon></button>
+
+    </div>
+</div>
+
+<app-card *ngIf="formService.view==='view_list'"></app-card> 
+
+<app-table *ngIf="formService.view==='view_module'"></app-table>
+
+
