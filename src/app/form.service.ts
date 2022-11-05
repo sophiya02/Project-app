@@ -16,6 +16,8 @@ export class FormService {
 
   view: string = 'view_module'
 
+  index: number =0;
+
  format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
   
   dataSource = new MatTableDataSource<EmployeeElement>(ELEMENT_DATA);
@@ -34,6 +36,9 @@ export class FormService {
     joining_date: new FormControl<Date>(new Date(),  [Validators.required]),
   });
 
+  get id(){
+    return this.route.snapshot.paramMap.get('id');
+  }
 
   set employeeData(data : EmployeeElement | null) {
     console.log('data',data);
@@ -80,20 +85,45 @@ export class FormService {
   
 
   onSave(){
-    if(this.employeeFormGroup.valid)
-    {
-      
-      localStorage.setItem(`employee_data_${this.employeeFormGroup.value.id}`, JSON.stringify(this.employeeFormGroup.value));
 
-      let data = JSON.parse(localStorage.getItem(`employee_data_${this.employeeFormGroup.value.id}`) as string );
-      data.joining_date = data.joining_date.toLocaleDateString();
-      ELEMENT_DATA.unshift(data);
+    if(this.id === ''){
+        if(this.employeeFormGroup.valid)
+        {
+          
+          localStorage.setItem(`employee_data_${this.employeeFormGroup.value.id}`, JSON.stringify(this.employeeFormGroup.value));
 
-      this.router.navigate(['./employees'])
+          let data = JSON.parse(localStorage.getItem(`employee_data_${this.employeeFormGroup.value.id}`) as string );
+          data.joining_date = data.joining_date.toLocaleDateString();
+          ELEMENT_DATA.unshift(data);
+
+          this.router.navigate(['./employees'])
+
+        }
+        else
+        alert('Please fill out the required details');
+    }
+    else{
+        if(this.employeeFormGroup.valid)
+        {
+          
+          let data = this.employeeFormGroup.value;
+          let newData : EmployeeElement = {
+            id: (data?.id) as string,
+            name: (data?.name) as string,
+            position: (data?.position) as string, 
+            about: (data?.about) as string,
+            joining_date: ((data.joining_date as Date).toLocaleDateString()) as string,
+          }
+          ELEMENT_DATA[this.index]=newData;
+
+          this.router.navigate(['./employees'])
+
+      }
 
     }
-    else
-    alert('Please fill out the required details');
+
+
+    
   }
 
   logAndRegister(){
@@ -105,8 +135,16 @@ export class FormService {
     console.log('id',id);
       if(this.loggedIn) {
         this.router.navigate(['./register', id]);
-        ELEMENT_DATA.forEach((v)=>{if(v.id === id) this.employeeData =  v}) ;
-        console.log('employee_data', this.employeeData)
+        ELEMENT_DATA.forEach((v, ind)=>{if(v.id === id) {
+          
+          this.employeeData =  v;
+
+          this.index = ind;
+        
+        }});
+
+        console.log('employee_data', this.employeeData);
+        
       }
       else{
         this.router.navigate(['./login']);
