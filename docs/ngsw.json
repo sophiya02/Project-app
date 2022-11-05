@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
-  "timestamp": 1667634446462,
-  "index": "/project-app/index.html",
+  "timestamp": 1667636672143,
+  "index": "https://sophiya02.github.io/Project-app/index.html",
   "assetGroups": [
     {
       "name": "app",
@@ -11,13 +11,13 @@
         "ignoreVary": true
       },
       "urls": [
-        "/project-app/favicon.ico",
-        "/project-app/index.html",
-        "/project-app/main.9240dfd18ed5e9c0.js",
-        "/project-app/manifest.webmanifest",
-        "/project-app/polyfills.058851ebae7dc92c.js",
-        "/project-app/runtime.b76a9c2be6a81dfc.js",
-        "/project-app/styles.b7d6abb4d32238ad.css"
+        "https://sophiya02.github.io/Project-app/favicon.ico",
+        "https://sophiya02.github.io/Project-app/index.html",
+        "https://sophiya02.github.io/Project-app/main.9240dfd18ed5e9c0.js",
+        "https://sophiya02.github.io/Project-app/manifest.webmanifest",
+        "https://sophiya02.github.io/Project-app/polyfills.058851ebae7dc92c.js",
+        "https://sophiya02.github.io/Project-app/runtime.b76a9c2be6a81dfc.js",
+        "https://sophiya02.github.io/Project-app/styles.b7d6abb4d32238ad.css"
       ],
       "patterns": []
     },
@@ -29,41 +29,41 @@
         "ignoreVary": true
       },
       "urls": [
-        "/project-app/assets/icons/icon-128x128.png",
-        "/project-app/assets/icons/icon-144x144.png",
-        "/project-app/assets/icons/icon-152x152.png",
-        "/project-app/assets/icons/icon-192x192.png",
-        "/project-app/assets/icons/icon-384x384.png",
-        "/project-app/assets/icons/icon-512x512.png",
-        "/project-app/assets/icons/icon-72x72.png",
-        "/project-app/assets/icons/icon-96x96.png",
-        "/project-app/assets/photos/img.webp",
-        "/project-app/assets/photos/menu-login.png",
-        "/project-app/assets/photos/pexels-steve-johnson-1044989.jpg"
+        "https://sophiya02.github.io/Project-app/assets/icons/icon-128x128.png",
+        "https://sophiya02.github.io/Project-app/assets/icons/icon-144x144.png",
+        "https://sophiya02.github.io/Project-app/assets/icons/icon-152x152.png",
+        "https://sophiya02.github.io/Project-app/assets/icons/icon-192x192.png",
+        "https://sophiya02.github.io/Project-app/assets/icons/icon-384x384.png",
+        "https://sophiya02.github.io/Project-app/assets/icons/icon-512x512.png",
+        "https://sophiya02.github.io/Project-app/assets/icons/icon-72x72.png",
+        "https://sophiya02.github.io/Project-app/assets/icons/icon-96x96.png",
+        "https://sophiya02.github.io/Project-app/assets/photos/img.webp",
+        "https://sophiya02.github.io/Project-app/assets/photos/menu-login.png",
+        "https://sophiya02.github.io/Project-app/assets/photos/pexels-steve-johnson-1044989.jpg"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/project-app/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
-    "/project-app/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
-    "/project-app/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
-    "/project-app/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
-    "/project-app/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
-    "/project-app/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
-    "/project-app/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
-    "/project-app/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
-    "/project-app/assets/photos/img.webp": "7fa3ca6c52e2095cdddcfb1789a9a236815e9b91",
-    "/project-app/assets/photos/menu-login.png": "7fa3ca6c52e2095cdddcfb1789a9a236815e9b91",
-    "/project-app/assets/photos/pexels-steve-johnson-1044989.jpg": "fb59754c342af55f0fa5968b62623943377c56b5",
-    "/project-app/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/project-app/index.html": "5fda5a7a065ef7b14906868139d91e53931bb660",
-    "/project-app/main.9240dfd18ed5e9c0.js": "ba3a339b39020f97a6b83f4cae5b23547adf8bea",
-    "/project-app/manifest.webmanifest": "f5c4414bfc2a0cc5473391d0bd7c77b160d8f1e8",
-    "/project-app/polyfills.058851ebae7dc92c.js": "8ce3c9884e39a992020a22e0fc53384206752123",
-    "/project-app/runtime.b76a9c2be6a81dfc.js": "10864e90e4741f364c0ec1b209ef0c4039b9f773",
-    "/project-app/styles.b7d6abb4d32238ad.css": "c9c48160e8b6b933b3e4f1ebc728db874d2886b6"
+    "https://sophiya02.github.io/Project-app/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://sophiya02.github.io/Project-app/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://sophiya02.github.io/Project-app/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://sophiya02.github.io/Project-app/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://sophiya02.github.io/Project-app/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://sophiya02.github.io/Project-app/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://sophiya02.github.io/Project-app/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://sophiya02.github.io/Project-app/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://sophiya02.github.io/Project-app/assets/photos/img.webp": "7fa3ca6c52e2095cdddcfb1789a9a236815e9b91",
+    "https://sophiya02.github.io/Project-app/assets/photos/menu-login.png": "7fa3ca6c52e2095cdddcfb1789a9a236815e9b91",
+    "https://sophiya02.github.io/Project-app/assets/photos/pexels-steve-johnson-1044989.jpg": "fb59754c342af55f0fa5968b62623943377c56b5",
+    "https://sophiya02.github.io/Project-app/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "https://sophiya02.github.io/Project-app/index.html": "5bd44c15b4eaab1252bbbe7161ec255ab819a9b1",
+    "https://sophiya02.github.io/Project-app/main.9240dfd18ed5e9c0.js": "ba3a339b39020f97a6b83f4cae5b23547adf8bea",
+    "https://sophiya02.github.io/Project-app/manifest.webmanifest": "f5c4414bfc2a0cc5473391d0bd7c77b160d8f1e8",
+    "https://sophiya02.github.io/Project-app/polyfills.058851ebae7dc92c.js": "8ce3c9884e39a992020a22e0fc53384206752123",
+    "https://sophiya02.github.io/Project-app/runtime.b76a9c2be6a81dfc.js": "10864e90e4741f364c0ec1b209ef0c4039b9f773",
+    "https://sophiya02.github.io/Project-app/styles.b7d6abb4d32238ad.css": "c9c48160e8b6b933b3e4f1ebc728db874d2886b6"
   },
   "navigationUrls": [
     {
